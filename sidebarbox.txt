@@ -1,0 +1,72 @@
+/*サイドバーカテゴリボックス*/
+
+.widget_categories ul li a { /*親カテゴリ用のコード*/
+    color: #dc143c;
+    text-decoration: none;
+	padding-right: 4px;
+    padding-left: 4px;
+    border-top: 1px dotted #ccc; /*上部にボーダーを引く*/
+    font-size: 16px;
+}
+
+.widget_categories ul li a::before { /*親カテゴリのアイコン*/
+    font-family: FontAwesome;
+    content: "\f209";
+    padding-right: 6px;
+}
+
+.widget_categories > ul > li > a:first-child { 
+    border-top: none; /*最初の親カテゴリは上部ボーダーを消す*/
+}
+
+.widget_categories ul li a .post-count { /*記事数用のコード*/
+    display: block;
+    float: right;
+    background: #ededed;
+    padding: 0 1em;
+    font-size: 14px;
+    margin-top: .2em;
+    border-radius: 4px;
+}
+.widget_categories ul li a:hover { /*親子共通マウスホバー時*/
+    background: none;
+    transition: 0.5s;
+    color: #72c7e6;
+}
+.widget_categories ul li a:hover .post-count { /*記事数のマウスホバー時*/
+    background: #72c7e6;
+    color: #fff;
+    transition: 0.5s;
+}
+.widget_categories ul li ul { /*子カテゴリのボックス*/
+    border-bottom: 1px dotted #ccc;
+}
+.widget_categories ul li ul li a { /*子カテゴリ用のコード*/
+    color: #333;
+    text-decoration: none;
+    padding: 0 4px 4px 4px;
+    display: block;
+    border: none;
+}
+.widget_categories ul li ul li a::before { /*子カテゴリのアイコン*/
+    font-family: FontAwesome;
+    content: "・";
+    padding: 0;
+}
+
+.widget_categories ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.widget_categories ul li{
+  width: 50%;
+  height: 70px;
+	/*
+  background-size: auto 65px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.cat-item-117 {
+  background-image: url("https://middlezer0.com/wp/wp-content/uploads/2020/04/ng-media.png");
+	
+}
